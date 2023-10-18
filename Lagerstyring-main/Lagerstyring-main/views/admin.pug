@@ -1,0 +1,43 @@
+head
+    include includes/head
+    script(type="module" src="js/adminFunctions.js" defer)
+
+body 
+    a(href='/')
+        button
+            i.fa-sharp.fa-solid.fa-left-long
+            span.knap Tilbage
+
+    h1 Adminside
+
+    a(href="/createVan") 
+        button.admin
+            i.fa-solid.fa-truck-front
+            span.knap Opret vogn
+        
+    a(href="/createUser")
+        button.admin
+            i.fa-solid.fa-user
+            span.knap Opret bruger 
+
+    a(href="/assignUserToVan")
+        button.admin 
+            i.fa-regular.fa-handshake
+            span.knap Tilknyt medarbejder til vogn
+
+div
+    h2 Vogne:
+        select#dropdown-select-van(name='select-van')
+            each van in vans 
+                option(value=option)=van.licensePlate
+        button(type='button' id="delete-van" class='delete-buttons-in-admin-page')
+            ion-icon(name="trash-outline")
+    h2 Medarbejdere:
+        select#dropdown-select-user(name='select-user')
+            each user in users
+                option(value=user.employeeId)=user.name 
+        button(type='button' id="delete-user" class='delete-buttons-in-admin-page')
+            ion-icon(name="trash-outline")
+
+
+

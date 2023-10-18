@@ -1,0 +1,33 @@
+{
+  "name": "lagerstyring",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "mocha 'test/*.test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielm0402/Lagerstyring.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danielm0402/Lagerstyring/issues"
+  },
+  "homepage": "https://github.com/Danielm0402/Lagerstyring#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "chai": "^4.3.7",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "firebase": "^9.20.0",
+    "ionicons": "^7.1.0",
+    "mocha": "^10.2.0",
+    "node-fetch": "^3.3.1",
+    "nodemon": "^2.0.22",
+    "pug": "^3.0.2"
+  }
+}

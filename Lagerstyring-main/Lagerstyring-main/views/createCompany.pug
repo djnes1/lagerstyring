@@ -1,0 +1,29 @@
+include includes/head
+
+body
+    a(href='/login')
+        button
+            i.fa-sharp.fa-solid.fa-left-long
+            span.knap Tilbage
+
+    form(action="/company", method='post')
+
+        div#div-createCompany
+        div
+            h2 Opret Firma
+        div
+            label(for="input-company-name") Firma navn:
+            input.inputtag(type="text" name="companyName")
+
+            label(for="input-cvr-nr") CVR nr: 
+            input.inputtag(type="text" name="cvrNr")
+
+            label(for="contact-person") Kontaktperson:
+            input.inputtag(type="text" name="contactPersonName")
+
+            label(for="contact-person-number") Kontaktperson tlf. nr.:
+            input.inputtag(type="text" name="contactPersonNumber")
+
+        div.createCompany-knap
+        button(id="create-company-btn" class="createCompany" type="submit") Opret Firma
+            

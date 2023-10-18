@@ -1,0 +1,59 @@
+head
+    include includes/head
+    script(type="module" src="js/indexFunctions.js" defer)
+    script().
+        const data = {
+            user: !{JSON.stringify(user)},
+            products: !{JSON.stringify(products)},
+        }
+
+body    
+
+    if role == 'admin'
+        a(href="/admin")
+            button.admin
+                i.i.fa-solid.fa-screwdriver-wrench
+                span.knap Admin
+
+    a(href="/logout")
+        button 
+
+            i.fa-solid.fa-unlock
+            span.knap Log ud
+
+    h1 Vogn:
+        select#dropdown-select-van(name='select-van')
+            option(value='' disabled selected) Vælg vogn
+            option(value='', id='option-show-all') Vis alle varer
+            each van in vans
+
+                if (van.userName)
+                    option(value=van.licensePlate, id=`option-${van.licensePlate}`)='Vogn ' + van.vanNumber + ' - ' + van.userName + ' - ' + van.licensePlate
+                else 
+                    option(value=van.licensePlate, id=`option-${van.licensePlate}`)='Vogn ' + van.vanNumber + ' - ' + van.licensePlate
+
+    a(href="/createProduct")
+        button.addProduct
+            i.fa-solid.fa-box-open
+            span.knap Tilføj ny vare
+
+
+    div#container-products
+        each product in products
+            div.product-container
+                p #{product.name}
+                p.storage-p(data-productid=product.productId) På lager: #{product.amount} #{product.unit}
+                    
+                div.buttons-trash-and-plusmin
+                    button.delete-button(type='button', data-productid=product.productId id="button-delete-product")
+                        ion-icon(name="trash-outline")  
+                    div.buttons-plus-minus
+                        button.button-plusmin(type='button', data-productid=product.productId, data-action="increase")
+                            ion-icon(name="add-circle-outline")
+                        button.button-plusmin(type='button', data-productid=product.productId, data-action="edit" )
+                            ion-icon(name="pencil-outline")
+                        button.button-plusmin(type='button', data-productid=product.productId, data-action="decrease")
+                            ion-icon(name="remove-circle-outline")
+
+
+

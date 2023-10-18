@@ -1,0 +1,27 @@
+include includes/head
+
+body
+    div.picture
+        img(style="width: 20%; height: auto;", src='images/stautrup-el-logo.png')
+
+    h1.headline(style="font-family: 'Source Sans Pro Black', sans-serif; font-size: 20px;") Lagerstyringssystem
+    
+    div.centerText
+        form(action='/', method='POST')
+            label(for="username") Brugernavn:
+            input(type="text", name="username")
+
+            label(for="password") Adgangskode:
+            input(type="password", name="password")
+            div.login
+                button(type="submit") Login
+
+    div.centerTextText
+        if errorMessage
+            p= errorMessage
+
+    div.opretfirma-knap            
+        a(href="/createCompany")
+            button(id="create-company")
+                span.knap Opret Firma
+

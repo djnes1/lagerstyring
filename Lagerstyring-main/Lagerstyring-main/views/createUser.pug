@@ -1,0 +1,44 @@
+head 
+    include includes/head
+    script(type="module" src="js/createUserFunctions.js" defer)
+    
+body
+    a(href='/admin')
+        button
+            i.fa-sharp.fa-solid.fa-left-long
+            span.knap Tilbage
+
+
+    div#div-create-user
+    div 
+        h2 Opret medarbejder
+    div
+        label(for="input-name") Navn:
+        input#input-name.input-userName(type="text" name="name")
+
+        label(for="input-employeeId") Medarbejder nr.: 
+        input#input-employeeId.input-employeeId(type="text" name="employeeId")
+        
+        label(for="input-username") Brugernavn: 
+        input#input-username.input-username(type="text" name="username")
+
+        label(for="input-password") Password: 
+        input#input-password.input-password(type="text" name="password")
+
+        label(for="input-repeat-password") Gentag password: 
+        input#input-repeat-password.input-password(type="text" name="repeat-password")
+
+
+        div#radio-buttons
+            label(for="input-role") Brugerrolle: 
+
+            input.radio-user-role(type="radio", id="admin", name="role", value="admin")
+            label(for="admin") Admin
+
+            input.radio-user-role(type="radio", id="electrician", name="role", value="electrician")
+            label(for="electrician") Elektrikker
+
+        p#err-messege(style="color:red")
+
+
+    button(id="create-user-btn" class="button-create") Opret medarbejder

@@ -1,0 +1,193 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+  }
+
+  i {
+    margin-right: 4px;
+  }
+
+  h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  select {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #ccc;
+  }
+
+  .product-container {
+    display: grid;
+    flex: none;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 20px;
+    /* background-color: #fff; */
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  .product-container-selected {
+    display: flex;
+    /* align-items: center;
+    justify-content: space-between; */
+    padding: 20px;
+    background-color: #ced5da;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+
+  }
+
+  .centerText {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .centerTextText {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  
+
+  .headline{
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+  }
+
+  .picture{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .login {
+    display: flex;
+    margin-top: 1vw;
+    justify-content: center;
+  }
+  
+  .opretfirma-knap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1px;
+    flex-direction: row;
+  }
+
+  #button-delete-product {
+    
+  }
+
+  .buttons-trash-and-plusmin{
+    display: flex;
+    align-items: center;
+
+  }
+  
+
+  .buttons-plus-minus{
+    display: flex;
+    flex-direction:column;
+    margin-left: auto
+
+  }
+
+
+  .button-plusmin{
+    margin: 2px;
+    padding: 5px;
+    max-width: 30px;
+    justify-self: end;
+  }
+  .delete-button {
+    margin: 2px;
+    padding: 5px;
+    max-width: 30px;
+    /* float:right; */
+    justify-self: end;
+  }
+
+  .addProduct{ 
+    margin-top: 10px
+  }
+
+  p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+
+  button {
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    padding: 10px;
+    margin-right: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;  
+  }
+
+  input {
+    margin-right: 4px;
+  }
+  
+  .admin {
+    margin-right: 5px;
+  }
+
+  .delete-buttons-in-admin-page {
+    margin-left: 5px
+  }
+  
+  .button-create {
+    margin-top: 10;
+  }
+
+  button a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  button:hover {
+    background-color: #555;
+  }
+  label{
+    display: block
+  }
+
+  .storage-p{
+    justify-self: center;
+    /* margin-right: 10; */
+  }
+
+  #radio-buttons label {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#radio-buttons input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.createCompany-knap{
+    margin-top: 10px;
+}
+
